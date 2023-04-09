@@ -2,6 +2,7 @@ name: manga_easy_perfil
 description: A new Flutter package project.
 version: 0.0.1
 homepage:
+publish_to: none
 
 environment:
   sdk: '>=2.19.6 <3.0.0'
@@ -10,6 +11,19 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  manga_easy_themes:
+    git:
+      url: https://github.com/manga-easy/manga_easy_themes.git
+      ref: 1.0.2
+  manga_easy_sdk:
+    git:
+      url: https://github.com/manga-easy/manga_easy_sdk.git
+      ref: v1.2.1
+  coffee_cup:
+    git:
+      url: https://github.com/manga-easy/manga_easy_coffee_cup.git
+      ref: v1.0.0
 
 dev_dependencies:
   flutter_test:
