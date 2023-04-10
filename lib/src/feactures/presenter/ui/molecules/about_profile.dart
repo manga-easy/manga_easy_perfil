@@ -1,6 +1,6 @@
 import 'package:coffee_cup/coffe_cup.dart';
 import 'package:flutter/material.dart';
-import 'package:manga_easy_perfil/src/feactures/presenter/ui/atomic/circular_profile.dart';
+import 'package:manga_easy_perfil/src/feactures/presenter/ui/atomic/circle_profile.dart';
 import 'package:manga_easy_themes/manga_easy_themes.dart';
 
 class AboutProfile extends StatelessWidget {
@@ -31,7 +31,7 @@ class AboutProfile extends StatelessWidget {
               padding: EdgeInsets.only(top: 50),
               child: Align(
                 alignment: Alignment.bottomCenter,
-                child: CircularProfile(),
+                child: CircleProfile(),
               ),
             ),
           ],

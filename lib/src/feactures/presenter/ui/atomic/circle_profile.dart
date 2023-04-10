@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:manga_easy_themes/manga_easy_themes.dart';
 
-class CircularProfile extends StatelessWidget {
-  const CircularProfile({super.key});
+class CircleProfile extends StatelessWidget {
+  const CircleProfile({super.key});
 
   @override
   Widget build(BuildContext context) {
