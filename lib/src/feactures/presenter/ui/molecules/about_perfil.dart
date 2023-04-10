@@ -72,6 +72,26 @@ class AboutPerfil extends StatelessWidget {
             )
           ],
         ),
+        const SizedBox(height: 20),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              backgroundColor: ThemeService.of.selectColor,
+              radius: 50,
+            ),
+            const SizedBox(width: 20),
+            CircleAvatar(
+              backgroundColor: ThemeService.of.selectColor,
+              radius: 50,
+            ),
+            const SizedBox(width: 20),
+            CircleAvatar(
+              backgroundColor: ThemeService.of.selectColor,
+              radius: 50,
+            ),
+          ],
+        ),
       ],
     );
   }
