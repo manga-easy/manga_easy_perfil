@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:manga_easy_perfil/src/feactures/presenter/ui/atomic/circular_profile.dart';
 import 'package:manga_easy_themes/manga_easy_themes.dart';
 
-class AboutPerfil extends StatelessWidget {
-  const AboutPerfil({super.key});
+class AboutProfile extends StatelessWidget {
+  const AboutProfile({super.key});
 
   @override
   Widget build(BuildContext context) {

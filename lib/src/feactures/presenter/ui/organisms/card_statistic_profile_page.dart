@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:manga_easy_perfil/src/feactures/presenter/ui/atomic/statistic_information.dart';
 import 'package:manga_easy_perfil/src/feactures/presenter/ui/molecules/card_description_name_widget.dart';
 
-class CardStatisticPerfilPage extends StatelessWidget {
-  const CardStatisticPerfilPage({super.key});
+class CardStatisticProfilePage extends StatelessWidget {
+  const CardStatisticProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {

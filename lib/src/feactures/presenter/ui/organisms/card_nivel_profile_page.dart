@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:manga_easy_perfil/src/feactures/presenter/ui/molecules/card_description_name_widget.dart';
 import 'package:manga_easy_themes/manga_easy_themes.dart';
 
-class CardNivelPerfilPage extends StatelessWidget {
-  const CardNivelPerfilPage({super.key});
+class CardNivelProfilePage extends StatelessWidget {
+  const CardNivelProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {

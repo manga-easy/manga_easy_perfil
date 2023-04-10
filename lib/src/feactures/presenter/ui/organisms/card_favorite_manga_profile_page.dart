@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:manga_easy_perfil/src/feactures/presenter/ui/molecules/card_description_name_widget.dart';
 import 'package:manga_easy_themes/manga_easy_themes.dart';
 
-class CardFavoriteMangaPerfilPage extends StatelessWidget {
-  const CardFavoriteMangaPerfilPage({super.key});
+class CardFavoriteMangaProfilePage extends StatelessWidget {
+  const CardFavoriteMangaProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
