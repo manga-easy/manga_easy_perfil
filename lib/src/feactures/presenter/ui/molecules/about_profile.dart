@@ -31,7 +31,7 @@ class AboutProfile extends StatelessWidget {
               padding: EdgeInsets.only(top: 50),
               child: Align(
                 alignment: Alignment.bottomCenter,
-                child: CircleProfile(),
+                child: CircleProfile(radius: 90),
               ),
             ),
           ],
