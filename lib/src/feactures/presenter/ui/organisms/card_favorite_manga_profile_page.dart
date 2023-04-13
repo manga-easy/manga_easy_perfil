@@ -7,8 +7,9 @@ class CardFavoriteMangaProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double sizeHeight = MediaQuery.of(context).size.height;
     return CardDescriptionNameWidget(
-      height: 225,
+      height: sizeHeight * 0.24 ,
       align: Alignment.topLeft,
       textDescriptionCard: 'Mangás favoritos',
       iconDescriptionCard: Icons.favorite,
@@ -18,21 +19,39 @@ class CardFavoriteMangaProfilePage extends StatelessWidget {
         topLeft: Radius.circular(20),
         topRight: Radius.circular(20),
       ),
-      child: ListView.separated(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 25),
-        itemCount: 3,
-        scrollDirection: Axis.horizontal,
-        physics: const NeverScrollableScrollPhysics(),
-        separatorBuilder: (context, index) => const SizedBox(width: 20),
-        itemBuilder: (context, index) {
-          return Container(
-            width: 100,
-            decoration: BoxDecoration(
-              color: ThemeService.of.selectColor,
-              borderRadius: BorderRadius.circular(20),
+      child: Padding(
+        padding: const EdgeInsets.only(top: 25, bottom: 16),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: 150,
+              width: 100,
+              decoration: BoxDecoration(
+                color: ThemeService.of.selectColor,
+                borderRadius: BorderRadius.circular(20),
+              ),
             ),
-          );
-        },
+            Container(
+              height: 150,
+              width: 100,
+              margin: const EdgeInsets.only(left: 10),
+              decoration: BoxDecoration(
+                color: ThemeService.of.selectColor,
+                borderRadius: BorderRadius.circular(20),
+              ),
+            ),
+            Container(
+              height: 150,
+              width: 100,
+              margin: const EdgeInsets.only(left: 10),
+              decoration: BoxDecoration(
+                color: ThemeService.of.selectColor,
+                borderRadius: BorderRadius.circular(20),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -8,8 +8,9 @@ class CardNivelProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double sizeHeight = MediaQuery.of(context).size.height;
     return CardDescriptionNameWidget(
-      height: 110,
+      height: sizeHeight * 0.13,
       textDescriptionCard: 'Nível',
       iconDescriptionCard: Icons.star,
       widthDescriptionCard: 80,
