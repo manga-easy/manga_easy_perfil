@@ -26,14 +26,13 @@ class CardDescriptionNameWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: SizedBox(
-        height: height + 15,
+        height: height,
         child: Stack(
           alignment: align ?? Alignment.topRight,
           children: [
             Positioned(
               top: 15,
               child: CardWidget(
-                height: height,
                 child: child,
               ),
             ),
