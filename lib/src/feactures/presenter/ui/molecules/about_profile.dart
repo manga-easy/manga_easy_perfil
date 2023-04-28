@@ -1,6 +1,8 @@
 import 'package:coffee_cup/coffe_cup.dart';
 import 'package:flutter/material.dart';
+import 'package:manga_easy_perfil/src/feactures/presenter/ui/atomic/card_widget.dart';
 import 'package:manga_easy_perfil/src/feactures/presenter/ui/atomic/circle_profile.dart';
+import 'package:manga_easy_perfil/src/feactures/presenter/ui/molecules/changed_password.dart';
 import 'package:manga_easy_themes/manga_easy_themes.dart';
 
 class AboutProfile extends StatelessWidget {
@@ -20,9 +22,15 @@ class AboutProfile extends StatelessWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Icon(Icons.key, size: 35),
-                    Icon(Icons.airline_seat_recline_normal, size: 35)
+                  children: [
+                    GestureDetector(
+                      onTap: () => showDialog(
+                        context: context,
+                        builder: (BuildContext context) => const ChangedPassword(),
+                      ),
+                      child: const Icon(Icons.key, size: 35),
+                    ),
+                    const Icon(Icons.airline_seat_recline_normal, size: 35)
                   ],
                 ),
               ),
