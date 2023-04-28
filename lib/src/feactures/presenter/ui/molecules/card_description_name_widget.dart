@@ -53,9 +53,14 @@ class CardDescriptionNameWidget extends StatelessWidget {
                 children: [
                   CoffeeText(
                     text: textDescriptionCard,
+                    color: ThemeService.of.primaryText,
                   ),
                   const SizedBox(width: 5),
-                  Icon(iconDescriptionCard, size: 18),
+                  Icon(
+                    iconDescriptionCard,
+                    size: 18,
+                    color: ThemeService.of.primaryText,
+                  ),
                 ],
               ),
             ),
