@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:manga_easy_perfil/src/feactures/presenter/ui/atomic/statistic_information.dart';
-import 'package:manga_easy_perfil/src/feactures/presenter/ui/molecules/card_description_name_widget.dart';
+import 'package:manga_easy_profile/src/feactures/presenter/ui/atomic/statistic_information.dart';
+import 'package:manga_easy_profile/src/feactures/presenter/ui/molecules/card_description_name_widget.dart';
 
 class CardStatisticProfilePage extends StatelessWidget {
   const CardStatisticProfilePage({super.key});

@@ -1,6 +1,6 @@
 import 'package:coffee_cup/coffe_cup.dart';
 import 'package:flutter/material.dart';
-import 'package:manga_easy_perfil/src/feactures/presenter/ui/molecules/card_description_name_widget.dart';
+import 'package:manga_easy_profile/src/feactures/presenter/ui/molecules/card_description_name_widget.dart';
 import 'package:manga_easy_themes/manga_easy_themes.dart';
 
 class CardNivelProfilePage extends StatelessWidget {

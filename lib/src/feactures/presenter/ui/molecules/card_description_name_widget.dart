@@ -1,6 +1,6 @@
 import 'package:coffee_cup/features/text/coffee_text.dart';
 import 'package:flutter/material.dart';
-import 'package:manga_easy_perfil/src/feactures/presenter/ui/atomic/card_widget.dart';
+import 'package:manga_easy_profile/src/feactures/presenter/ui/atomic/card_widget.dart';
 import 'package:manga_easy_themes/manga_easy_themes.dart';
 
 class CardDescriptionNameWidget extends StatelessWidget {
@@ -61,6 +61,7 @@ class CardDescriptionNameWidget extends StatelessWidget {
                     size: 18,
                     color: ThemeService.of.primaryText,
                   ),
+                  
                 ],
               ),
             ),

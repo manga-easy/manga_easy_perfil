@@ -31,3 +31,10 @@ build/
 
 .metadata
 .pubspeclock
+android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+android/local.properties
+.flutter-plugins-dependencies
+.flutter-plugins
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-plugins-dependencies
