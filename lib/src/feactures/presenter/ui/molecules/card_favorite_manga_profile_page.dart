@@ -1,5 +1,5 @@
+import 'package:coffee_cup/coffe_cup.dart';
 import 'package:flutter/material.dart';
-import 'package:manga_easy_profile/src/feactures/presenter/ui/molecules/card_description_name_widget.dart';
 import 'package:manga_easy_themes/manga_easy_themes.dart';
 
 class CardFavoriteMangaProfilePage extends StatelessWidget {
@@ -7,20 +7,17 @@ class CardFavoriteMangaProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double sizeHeight = MediaQuery.of(context).size.height;
-    return CardDescriptionNameWidget(
-      height: sizeHeight * 0.24 ,
-      align: Alignment.topLeft,
-      textDescriptionCard: 'Mangás favoritos',
-      iconDescriptionCard: Icons.favorite,
-      widthDescriptionCard: 150,
-      borderRadiusDescriptionCard: const BorderRadius.only(
-        bottomRight: Radius.circular(20),
-        topLeft: Radius.circular(20),
-        topRight: Radius.circular(20),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.only(top: 25, bottom: 16),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: CoffeeContainer(
+        alignDescription: Alignment.topLeft,
+        textDescriptionCard: 'Mangás favoritos',
+        iconDescriptionCard: Icons.favorite,
+        borderRadiusDescriptionCard: const BorderRadius.only(
+          bottomRight: Radius.circular(20),
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

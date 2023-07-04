@@ -1,6 +1,5 @@
 import 'package:coffee_cup/coffe_cup.dart';
 import 'package:flutter/material.dart';
-import 'package:manga_easy_profile/src/feactures/presenter/ui/atomic/card_widget.dart';
 import 'package:manga_easy_themes/manga_easy_themes.dart';
 
 class ChangedPassword extends StatelessWidget {
@@ -9,6 +8,8 @@ class ChangedPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+      backgroundColor: ThemeService.of.backgroundColor,
+      elevation: 0,
       insetPadding: const EdgeInsets.symmetric(horizontal: 25),
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
@@ -32,51 +33,45 @@ class ChangedPassword extends StatelessWidget {
                 'Tenha em mente que a nova senha não pode ser igual a anterior.',
           ),
           const SizedBox(height: 10),
-          CardWidget(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CoffeeText(
-                    text: 'Senha atual',
-                    color: ThemeService.of.primaryColor,
+          CoffeeContainer(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CoffeeText(
+                  text: 'Senha atual',
+                  color: ThemeService.of.primaryColor,
+                ),
+                const TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    isDense: true,
+                    contentPadding: EdgeInsets.zero,
+                    border: InputBorder.none,
                   ),
-                  const TextField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      isDense: true,
-                      contentPadding: EdgeInsets.zero,
-                      border: InputBorder.none,
-                    ),
-                  ),
-                  const SizedBox(height: 5),
-                ],
-              ),
+                ),
+                const SizedBox(height: 5),
+              ],
             ),
           ),
           const SizedBox(height: 10),
-          CardWidget(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CoffeeText(
-                    text: 'Nova senha',
-                    color: ThemeService.of.primaryColor,
+          CoffeeContainer(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CoffeeText(
+                  text: 'Nova senha',
+                  color: ThemeService.of.primaryColor,
+                ),
+                const TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    isDense: true,
+                    contentPadding: EdgeInsets.zero,
+                    border: InputBorder.none,
                   ),
-                  const TextField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      isDense: true,
-                      contentPadding: EdgeInsets.zero,
-                      border: InputBorder.none,
-                    ),
-                  ),
-                  const SizedBox(height: 5),
-                ],
-              ),
+                ),
+                const SizedBox(height: 5),
+              ],
             ),
           ),
           const SizedBox(height: 10),
@@ -89,7 +84,6 @@ class ChangedPassword extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 25),
                   child: CoffeeButton(
                       label: 'Alterar',
-                      
                       onPressed: () {},
                       padding: const EdgeInsets.symmetric(vertical: 12)),
                 ),

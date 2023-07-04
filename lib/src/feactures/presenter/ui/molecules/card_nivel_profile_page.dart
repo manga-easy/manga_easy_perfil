@@ -1,6 +1,5 @@
 import 'package:coffee_cup/coffe_cup.dart';
 import 'package:flutter/material.dart';
-import 'package:manga_easy_profile/src/feactures/presenter/ui/molecules/card_description_name_widget.dart';
 import 'package:manga_easy_themes/manga_easy_themes.dart';
 
 class CardNivelProfilePage extends StatelessWidget {
@@ -8,18 +7,15 @@ class CardNivelProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double sizeHeight = MediaQuery.of(context).size.height;
-    return CardDescriptionNameWidget(
-      height: sizeHeight * 0.13,
-      textDescriptionCard: 'Nível',
-      iconDescriptionCard: Icons.star,
-      widthDescriptionCard: 80,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: CoffeeContainer(
+        textDescriptionCard: 'Nível',
+        iconDescriptionCard: Icons.star,
         child: Row(
           children: [
-            Column(
-              children: const [
+            const Column(
+              children: [
                 CoffeeText(
                   text: 'NÍVEL',
                   typography: CoffeeTypography.title,

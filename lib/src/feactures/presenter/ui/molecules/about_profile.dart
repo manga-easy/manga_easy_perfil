@@ -68,6 +68,16 @@ class AboutProfile extends StatelessWidget {
               text: 'Tim maia',
               typography: CoffeeTypography.title,
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CoffeeText(text: 'timmaia@hotmail.com'),
+                CoffeeIconButton(
+                  onTap: () {},
+                  icon: Icons.remove_red_eye,
+                )
+              ],
+            ),
             const SizedBox(height: 10),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 16),
@@ -79,7 +89,7 @@ class AboutProfile extends StatelessWidget {
             const SizedBox(height: 10),
             CoffeeText(
               text: 'Conta criada em 20 jun, 2023',
-              color: ThemeService.of.primaryText.withOpacity(0.5),
+              color: ThemeService.of.backgroundText.withOpacity(0.5),
             )
           ],
         ),

@@ -1,9 +1,9 @@
 import 'package:coffee_cup/coffe_cup.dart';
 import 'package:flutter/material.dart';
 import 'package:manga_easy_profile/src/feactures/presenter/ui/molecules/about_profile.dart';
-import 'package:manga_easy_profile/src/feactures/presenter/ui/organisms/card_favorite_manga_profile_page.dart';
-import 'package:manga_easy_profile/src/feactures/presenter/ui/organisms/card_nivel_profile_page.dart';
-import 'package:manga_easy_profile/src/feactures/presenter/ui/organisms/card_statistic_profile_page.dart';
+import 'package:manga_easy_profile/src/feactures/presenter/ui/molecules/card_favorite_manga_profile_page.dart';
+import 'package:manga_easy_profile/src/feactures/presenter/ui/molecules/card_nivel_profile_page.dart';
+import 'package:manga_easy_profile/src/feactures/presenter/ui/molecules/card_statistic_profile_page.dart';
 import 'package:manga_easy_profile/src/feactures/presenter/ui/pages/edit_page.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -34,9 +34,9 @@ class ProfilePage extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           const CardNivelProfilePage(),
-          const SizedBox(height: 20),
-          const CardFavoriteMangaProfilePage(),
           const SizedBox(height: 10),
+          // const CardFavoriteMangaProfilePage(),
+         // const SizedBox(height: 10),
           const CardStatisticProfilePage(),
           const SizedBox(height: 10),
         ],
