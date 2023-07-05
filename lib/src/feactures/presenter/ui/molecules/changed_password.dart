@@ -33,61 +33,36 @@ class ChangedPassword extends StatelessWidget {
                 'Tenha em mente que a nova senha não pode ser igual a anterior.',
           ),
           const SizedBox(height: 10),
-          CoffeeContainer(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CoffeeText(
-                  text: 'Senha atual',
-                  color: ThemeService.of.primaryColor,
-                ),
-                const TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    isDense: true,
-                    contentPadding: EdgeInsets.zero,
-                    border: InputBorder.none,
-                  ),
-                ),
-                const SizedBox(height: 5),
-              ],
-            ),
+          const CoffeeField(
+            title: 'Senha atual',
+            hintText: 'Digite sua senha...',
+            obscureText: true,
           ),
           const SizedBox(height: 10),
-          CoffeeContainer(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CoffeeText(
-                  text: 'Nova senha',
-                  color: ThemeService.of.primaryColor,
-                ),
-                const TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    isDense: true,
-                    contentPadding: EdgeInsets.zero,
-                    border: InputBorder.none,
-                  ),
-                ),
-                const SizedBox(height: 5),
-              ],
-            ),
+          const CoffeeField(
+            title: 'Nova senha',
+            hintText: 'Digite uma nova senha...',
+            obscureText: true,
           ),
           const SizedBox(height: 10),
           Row(
             children: [
-              CoffeeButtonText(text: 'Cancelar', onPressed: () {}),
+              CoffeeButtonText(
+                text: 'Cancelar',
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
               const Spacer(),
               Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 25),
-                  child: CoffeeButton(
-                      label: 'Alterar',
-                      onPressed: () {},
-                      padding: const EdgeInsets.symmetric(vertical: 12)),
+                child: CoffeeButton(
+                  margin: const EdgeInsets.only(left: 40),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                  label: 'Alterar',
+                  onPressed: () {},
                 ),
-              )
+              ),
             ],
           ),
         ],
