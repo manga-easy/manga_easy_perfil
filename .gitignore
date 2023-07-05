@@ -38,3 +38,5 @@ android/local.properties
 .flutter-plugins
 .flutter-plugins-dependencies
 .flutter-plugins-dependencies
+.flutter-plugins
+.flutter-plugins-dependencies
