@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:persistent_database/persistent_database.dart';
 
-class ProfileController {
+class ProfileController extends ChangeNotifier {
   final Preference _preference;
 
   ProfileController(this._preference);
@@ -9,17 +10,20 @@ class ProfileController {
 
   void init() async {
     seeGmail = await loadingGmail();
+    notifyListeners();
   }
 
   void saveGmail() async {
+    seeGmail = !seeGmail;
     await _preference.put(
-      value: !seeGmail,
+      value: seeGmail,
       keyPreferences: KeyPreferences.seeGmail,
     );
+    notifyListeners();
   }
 
   Future<bool> loadingGmail() async {
-    return await _preference.get(keyPreferences: KeyPreferences.seeGmail);
+    return await _preference.get<bool>(keyPreferences: KeyPreferences.seeGmail);
   }
 
 //   Future<File?> selectImageFromGallery() async {

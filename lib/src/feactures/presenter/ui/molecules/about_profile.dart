@@ -1,12 +1,19 @@
 import 'package:coffee_cup/coffe_cup.dart';
 import 'package:flutter/material.dart';
+import 'package:manga_easy_profile/src/feactures/presenter/controller/profile_controller.dart';
 import 'package:manga_easy_profile/src/feactures/presenter/ui/atomic/circle_profile.dart';
 import 'package:manga_easy_profile/src/feactures/presenter/ui/molecules/changed_password.dart';
 import 'package:manga_easy_themes/manga_easy_themes.dart';
 
-class AboutProfile extends StatelessWidget {
-  const AboutProfile({super.key});
+class AboutProfile extends StatefulWidget {
+  final ProfileController ct;
+  const AboutProfile({super.key, required this.ct});
 
+  @override
+  State<AboutProfile> createState() => _AboutProfileState();
+}
+
+class _AboutProfileState extends State<AboutProfile> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -71,9 +78,17 @@ class AboutProfile extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CoffeeText(text: 'timmaia@hotmail.com'),
+                CoffeeText(
+                  text: 'timmaia@hotmail.com',
+                  maskFilter: widget.ct.seeGmail ? 3 : 0,
+                ),
                 CoffeeIconButton(
-                  onTap: () {},
+                  onTap: () {
+                    setState(() {
+                      widget.ct.saveGmail();
+                    });
+                    print(widget.ct.seeGmail);
+                  },
                   icon: Icons.remove_red_eye,
                 )
               ],

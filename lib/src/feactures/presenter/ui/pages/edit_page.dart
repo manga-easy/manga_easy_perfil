@@ -1,12 +1,16 @@
+import 'dart:io';
+
 import 'package:coffee_cup/coffe_cup.dart';
 import 'package:flutter/material.dart';
+import 'package:manga_easy_profile/src/feactures/presenter/controller/profile_controller.dart';
 import 'package:manga_easy_profile/src/feactures/presenter/ui/atomic/circle_profile.dart';
 import 'package:manga_easy_profile/src/feactures/presenter/ui/atomic/statistic_information.dart';
 import 'package:manga_easy_themes/manga_easy_themes.dart';
 
 class EditPage extends StatelessWidget {
   static const route = '/edit-perfil';
-  const EditPage({super.key});
+  final ProfileController ct;
+  const EditPage({super.key, required this.ct});
 
   @override
   Widget build(BuildContext context) {
@@ -30,11 +34,19 @@ class EditPage extends StatelessWidget {
                 padding: EdgeInsets.only(top: 75, left: 10),
                 child: CircleProfile(radius: 90),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(top: 140, left: 225, right: 25),
                 child: Column(
                   children: [
-                    CoffeeButton(label: 'Alterar imagem'),
+                    CoffeeButton(
+                      label: 'Alterar imagem',
+                      onPressed: () async {
+                        // File? image = await ct.selectImageFromGallery();
+                        // if (image != null) {
+                        //   await sendImageToAPI(image);
+                        // }
+                      },
+                    ),
                     CoffeeButtonText(
                       text: 'Remover imagem',
                     ),
