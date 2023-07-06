@@ -15,15 +15,22 @@ dependencies:
     git:
       url: https://github.com/manga-easy/manga_easy_themes.git
       ref: 1.0.2
+  manga_easy_routes:
+    git:
+      url: https://github.com/manga-easy/manga_easy_routes.git
+      ref: v1.0.2
   manga_easy_sdk:
     git:
       url: https://github.com/manga-easy/manga_easy_sdk.git
-      ref: v1.4.1
+      ref: v1.3.0
   coffee_cup:
-    git:
-      url: https://github.com/manga-easy/manga_easy_coffee_cup.git
-      ref: v1.3.1
-
+    path: ../manga_easy_coffee_cup
+  persistent_database:
+    path: ../lib_persistent_database
+  image_picker: ^1.0.0
+  dio: ^5.2.1+1
+  get_it: ^7.2.0
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
