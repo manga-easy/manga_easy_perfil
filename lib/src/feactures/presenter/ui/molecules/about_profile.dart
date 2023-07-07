@@ -29,17 +29,21 @@ class _AboutProfileState extends State<AboutProfile> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    GestureDetector(
+                    CoffeeIconButton(
+                      icon: Icons.arrow_back_sharp,
+                      color: ThemeService.of.backgroundText,
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                    ),
+                    CoffeeIconButton(
+                      icon: Icons.key,
+                      color: ThemeService.of.backgroundText,
                       onTap: () => showDialog(
                         context: context,
                         builder: (BuildContext context) =>
                             const ChangedPassword(),
                       ),
-                      child: const Icon(Icons.key, size: 35),
-                    ),
-                    const Icon(
-                      Icons.airline_seat_recline_normal,
-                      size: 35,
                     ),
                   ],
                 ),
@@ -80,14 +84,15 @@ class _AboutProfileState extends State<AboutProfile> {
               children: [
                 CoffeeText(
                   text: 'timmaia@hotmail.com',
-                  maskFilter: widget.ct.seeGmail ? 3 : 0,
+                  maskFilter: widget.ct.obscureEmail ? 3 : 0,
                 ),
                 CoffeeIconButton(
                   onTap: () {
-                    setState(() {
-                      widget.ct.saveGmail();
-                    });
-                    print(widget.ct.seeGmail);
+                    setState(
+                      () {
+                        widget.ct.saveEmail();
+                      },
+                    );
                   },
                   icon: Icons.remove_red_eye,
                 )

@@ -13,7 +13,7 @@ class StatisticInformation extends StatelessWidget {
     return Column(
       children: [
         CoffeeText(
-          text: visible ? '$statistic' : '****',
+          text: visible ? '****' : '$statistic',
           typography: CoffeeTypography.title,
         ),
         CoffeeText(text: name),

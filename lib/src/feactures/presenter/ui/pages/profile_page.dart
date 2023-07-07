@@ -4,7 +4,7 @@ import 'package:get_it/get_it.dart';
 import 'package:manga_easy_profile/src/feactures/presenter/controller/profile_controller.dart';
 import 'package:manga_easy_profile/src/feactures/presenter/ui/molecules/about_profile.dart';
 import 'package:manga_easy_profile/src/feactures/presenter/ui/molecules/card_nivel_profile_page.dart';
-import 'package:manga_easy_profile/src/feactures/presenter/ui/molecules/card_statistic_profile_page.dart';
+import 'package:manga_easy_profile/src/feactures/presenter/ui/molecules/custom_card_statistic.dart';
 import 'package:manga_easy_profile/src/feactures/presenter/ui/pages/edit_page.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -54,7 +54,9 @@ class _ProfilePageState extends State<ProfilePage> {
           const SizedBox(height: 10),
           // const CardFavoriteMangaProfilePage(),
           // const SizedBox(height: 10),
-          const CardStatisticProfilePage(),
+          CustomCardStatistic(
+            visible: ct.obscureStatistic,
+          ),
           const SizedBox(height: 10),
         ],
       ),

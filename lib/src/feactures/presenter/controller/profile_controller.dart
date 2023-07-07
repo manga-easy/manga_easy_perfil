@@ -6,24 +6,41 @@ class ProfileController extends ChangeNotifier {
 
   ProfileController(this._preference);
 
-  bool seeGmail = true;
+  bool obscureEmail = true;
+  bool obscureStatistic = false;
 
   void init() async {
-    seeGmail = await loadingGmail();
+    obscureEmail = await loadingEmail();
+    obscureStatistic = await loadingStatistic();
     notifyListeners();
   }
 
-  void saveGmail() async {
-    seeGmail = !seeGmail;
+  void saveEmail() async {
+    obscureEmail = !obscureEmail;
     await _preference.put(
-      value: seeGmail,
-      keyPreferences: KeyPreferences.seeGmail,
+      value: obscureEmail,
+      keyPreferences: KeyPreferences.obscureEmail,
     );
     notifyListeners();
   }
 
-  Future<bool> loadingGmail() async {
-    return await _preference.get<bool>(keyPreferences: KeyPreferences.seeGmail);
+  Future<bool> loadingEmail() async {
+    return await _preference.get<bool>(
+        keyPreferences: KeyPreferences.obscureEmail);
+  }
+
+  void saveStatistic(bool value) async {
+    await _preference.put(
+      value: value,
+      keyPreferences: KeyPreferences.obscureStatistic,
+    );
+    obscureStatistic = value;
+    notifyListeners();
+  }
+
+  Future<bool> loadingStatistic() async {
+    return await _preference.get<bool>(
+        keyPreferences: KeyPreferences.obscureStatistic);
   }
 
 //   Future<File?> selectImageFromGallery() async {
